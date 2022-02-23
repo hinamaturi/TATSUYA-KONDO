@@ -1,0 +1,303 @@
+@import 'setting.scss' ;
+
+//-------------------------
+//    全体構造
+//-------------------------
+body {
+  background-color: #000;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Lato','ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin: 0 auto;
+}
+
+//-------------------------
+//    ヘッダー
+//-------------------------
+#home header{
+  position: fixed ;
+  width: 100%;
+  top: 15px;
+  z-index: 1;
+  transition: color 0.4s ease-out;
+  }
+header{
+  .hamburger-button path {
+    fill: #FFF;
+  }
+  .hamburger-button {
+    background-color: rgba(0,0,0,0);
+    margin-top: -10px;
+  }
+  // --------ハンバーガークリック画面-----------------
+  .hamburger-nav {
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    ul{
+      text-align: right;
+      margin: 150px 30px 0 0;
+    }
+    li{
+      margin-bottom:40px ;
+    }
+    a{
+      color: #FFF;
+      font-size: 25px;
+      text-decoration:none ;
+      letter-spacing: 0.3em;
+    }
+    .hamburger-img{
+      text-align: right;
+      margin: 50px 30px 0 0;
+    }
+  }
+}
+video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin-bottom: 60px;
+}
+// -------------スクロール------------------
+
+
+//-------------------------
+//    フッター
+//-------------------------
+footer{
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    p{
+      font-size: 12px;
+      margin-top: 130px;
+    }
+    img{
+      margin-top: -20px;
+    }
+  }
+}
+
+//-------------------------
+//    ページ内タブ
+//-------------------------
+
+ul{
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+.wrap-tab{
+  overflow: hidden;
+}
+.list-tab{
+  width: 500px;
+  display: flex;
+  margin: 0 auto 100px auto;
+}
+.list-tab li{
+  display: block;
+  padding: 0.5em 0;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.list-tab .active{
+  border-bottom: 1px dotted #fff;
+} 
+.tab-content{
+  display: none;
+}
+.tab-content.active{
+  display: block;
+}
+
+
+
+//-------------------------
+//    トップページ
+//-------------------------
+#home{
+  .video-wrap{
+    position: relative;
+  }
+}
+.tab-content.active{
+  width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// ------画像ホバー時エフェクト-----
+.box{
+  margin-bottom: 50px;
+
+  .onimg{
+  width: 400px;
+  height: auto;
+  position: relative;
+  margin-bottom: 10px;
+
+  .hover-text{
+    @include hover-effect;
+      p{
+      color: #fff;
+      }
+    }
+  :hover {
+    opacity: 1;
+    transition:all 0.6s ease;
+    }
+  }
+  h2{
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  h3{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+}
+
+//-------------------------
+//    プロフィールページ
+//-------------------------
+
+#profile{
+  header{
+    margin: 30px 0 150px 30px;
+   .hamburger-button{
+     margin: 0 5px 0 0;
+   }
+  }
+  main{
+    @include width1200;
+    margin-bottom: 100px;
+  section{
+    @include row;
+    p{
+      margin-bottom: 15px;
+      letter-spacing: 0.05em;
+      line-height: 22px;
+    }
+    .profile-content{
+      width: 450px;
+        h2{
+          font-size: 25px;
+          font-weight: bold;
+          margin-bottom: 50px;
+          letter-spacing: 0.2em;
+        }
+      }
+      h3{
+        font-size:20px ;
+        font-weight: 700;
+        letter-spacing: 0.7em;
+      }
+      h4{
+        font-size:18px ;
+        font-weight: 500;
+        letter-spacing: 0.3em;
+        margin-bottom: 15px;
+      }
+    }
+  .top{
+    margin: 0 100px 120px 100px;
+  }
+  .middle{
+    margin: 0 150px 120px 150px;
+    .left{
+      width: 300px;
+      border-top: 1px solid #fff;
+      padding-top: 50px;
+    }
+    .right{
+      margin:50px 250px 0 0;
+      p{
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .bottom{
+    margin: 0 100px 120px 150px;
+    .right{
+      width: 450px;
+      .sns-ideas{
+        a{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .buttun-contact{
+    text-align: center;
+    a{
+      @include form-btn;
+      font-size: 18px;
+      letter-spacing: 0.5em;
+      padding: 1.5em 1.7em;
+      text-decoration: none;
+    }
+    a:hover{
+      color: #FFF;
+      background: #1FFFFF;
+      box-shadow: 0 0 50px #21cbff;
+      transition-delay: 0.15s;
+    }
+    p{
+      font-size: 13px;
+      margin-top: 40px;
+    }
+  }
+ }
+}
+
+//-------------------------
+//    コンタクトページ
+//-------------------------
+#contact{
+header{
+  margin: 30px 0 150px 30px;
+  .hamburger-button{
+    margin: 0 5px 0 0;
+}
+}
+.form{
+  margin: 0 auto 170px auto;
+  max-width: 720px;
+  .form-item{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+  }
+  .form-label{
+    width: 100%;
+    max-width: 140px;
+    letter-spacing: 0.1em;
+    padding: 10px 0 0 0;
+  }
+  .form-input{
+    @include form-box;
+  }
+  .form-textarea{
+    @include form-box;
+    height: 200px;
+  }
+  .btnarea{
+    text-align: right;
+  }
+  .form-btn{
+    @include form-btn;
+  }
+}
+}
+
