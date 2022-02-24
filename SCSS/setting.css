@@ -1,0 +1,69 @@
+@-webkit-keyframes flickering {
+  0% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+  2% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+  4% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+  8% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+  28% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+  30% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+  36% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+  100% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+}
+@keyframes flickering {
+  0% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+  2% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+  4% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+  8% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+  28% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+  30% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+  36% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+  100% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=setting.css.map */
